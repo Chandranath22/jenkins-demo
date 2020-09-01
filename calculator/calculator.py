@@ -14,7 +14,7 @@ def multiply(x, y):
 # This function divides two numbers
 def divide(x, y):
   if (y == 0):
-    raise ValueError('Cannot divide by 0')
+    raise ValueError('Cannot divide by Zero(0)')
   return x / y
 
 #This function checks if the input is a number
