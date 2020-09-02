@@ -14,8 +14,8 @@ def multiply(x, y):
 # This function divides two numbers
 def divide(x, y):
   if (y == 0):
-    raise ValueError('Cannot divide by Zero(0)')
-  return x // y
+    return False
+  return x / y
 
 #This function checks if the input is a number
 def check_is_numeric (number):
@@ -97,6 +97,13 @@ def lambda_handler (event, context):
         }
 
       elif choice == '4':
+        if(divide(num1, num2) == False):
+          return {
+            'statusCode': 400,
+            'body': json.dumps({
+              'message': 'Cannot divide by 0'
+            })
+          }
         print(num1, "/", num2, "=", divide(num1, num2))
         return {
           'statusCode': 200,

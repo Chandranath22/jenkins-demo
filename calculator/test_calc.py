@@ -22,8 +22,7 @@ class TestCalc (unittest.TestCase):
     self.assertEqual(calc.divide(43, 25), 1.72)
     self.assertEqual(calc.divide(-1, 1), -1)
     self.assertEqual(calc.divide(-1, -1), 1)
-    with self.assertRaises(ValueError):
-      calc.divide(2, 0)
+    self.assertEqual(calc.divide(2, 0), False)
 
   def test_numeric (self):
     self.assertFalse(calc.check_is_numeric('-10'))
