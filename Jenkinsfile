@@ -12,10 +12,17 @@ pipeline {
         }
       }
 
-      stage ('Build Sam package'){
+      stage ('Build SAM package'){
         steps {
           echo '******************* Building *************************'
           bat label: 'Sam building', script: 'sam build'
+        }
+      }
+
+      stage ('Deploying SAM template'){
+        steps {
+          echo '******************* Building *************************'
+          bat label: 'Sam deploying', script: 'sam deploy --stack-name calc-demo --region ap-south-1 --capabilities CAPABILITY_IAM --confirm-changeset true'
         }
       }
     }
