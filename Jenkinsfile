@@ -6,8 +6,10 @@ pipeline {
   agent any
     stages {
       stage('Test'){
-        echo '******************* Testing ************************'
-        python calculator/test_calc.py
+        steps {
+          echo '******************* Testing ************************'
+          python calculator/test_calc.py
+        }
       }
     }
 }
