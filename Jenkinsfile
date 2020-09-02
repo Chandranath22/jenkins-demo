@@ -5,10 +5,17 @@ def functionName = 'calculator.py'
 pipeline {
   agent any
     stages {
-      stage('Test'){
+      stage ('Test'){
         steps {
           echo '******************* Testing ************************'
           bat label: 'testing', script: 'python calculator/test_calc.py'
+        }
+      }
+
+      stage ('Build Sam package'){
+        steps {
+          echo '******************* Building *************************'
+          bat label: 'Sam building', script: 'sam build'
         }
       }
     }
