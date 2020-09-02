@@ -15,7 +15,7 @@ def multiply(x, y):
 def divide(x, y):
   if (y == 0):
     raise ValueError('Cannot divide by Zero(0)')
-  return x // y
+  return x / y
 
 #This function checks if the input is a number
 def check_is_numeric (number):
