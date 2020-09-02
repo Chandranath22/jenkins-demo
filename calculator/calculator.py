@@ -99,7 +99,8 @@ def lambda_handler (event, context):
           return {
             'statusCode': 400,
             'body': json.dumps({
-              'message': 'Cannot divide by 0'
+              'message': 'Division operation',
+              'value': 'Cannot divide by 0'
             })
           }
         print(num1, "/", num2, "=", divide(num1, num2))
