@@ -33,12 +33,11 @@ def lambda_handler (event, context):
     # Check if choice is one of the four options
     if choice in ('1', '2', '3', '4'):
 
-      #Get the numbers from user
+      #Get the choice from user
       first_num = event['pathParameters']['firstNumber']
 
       #Check is number
       if(check_is_numeric(first_num) == False):
-        print("Invalid input")
         return {
           'statusCode': 400,
           'body': json.dumps({
@@ -54,7 +53,6 @@ def lambda_handler (event, context):
 
       #Check is number
       if(check_is_numeric(first_num) == False):
-        print("Invalid input")
         return {
           'statusCode': 400,
           'body': json.dumps({
