@@ -8,7 +8,7 @@ pipeline {
       stage('Test'){
         steps {
           echo '******************* Testing ************************'
-          python calculator/test_calc.py
+          bat label: 'testing', script: 'python calculator/test_calc.py'
         }
       }
     }
