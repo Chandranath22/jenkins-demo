@@ -1,9 +1,9 @@
 def bucket = 'jenkins-demo-101'
 def region = 'ap-south-1'
-def functionName = calculator.py
+def functionName = 'calculator.py'
 
-node ('slaves') {
-  stage('Checkout'){
-    checkout scm
+node {
+  stage('Test'){
+    sh 'python3 calculator/test_calc.py'
   }
 }
