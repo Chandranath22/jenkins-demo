@@ -29,7 +29,7 @@ pipeline {
       stage ('Deploying SAM template') {
         steps {
           echo '******************* Deploying *************************'
-          bat label: 'Sam deploying', script: 'sam deploy --stack-name calc-demo --region ap-south-1 --capabilities CAPABILITY_IAM -no-confirm-changeset true --s3-bucket jenkins-demo-101'
+          bat label: 'Sam deploying', script: 'sam deploy --stack-name calc-demo --region ap-south-1 --capabilities CAPABILITY_IAM --no-confirm-changeset true --s3-bucket jenkins-demo-101'
         }
       }
     }
