@@ -1,7 +1,3 @@
-def bucket = 'jenkins-demo-101'
-def region = 'ap-south-1'
-def functionName = 'calculator.py'
-
 pipeline {
   agent any
     stages {
