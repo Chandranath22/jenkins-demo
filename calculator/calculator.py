@@ -118,6 +118,6 @@ def lambda_handler (event, context):
           'statusCode': 400,
           'body': json.dumps({
             'message': 'Invalid operation',
-            'value': 'Bad request'
+            'value': 'Bad request, invalid input'
           })
         }
